@@ -10,4 +10,4 @@ to compile shellcode : ./compile.py program.asm
  list argv[2]  
 to view shellcode :./compile.py program.asm shell  
 
-![Image of shellcode_development](https://raw.githubusercontent.com/mucomplex/shellcode_development/master/images/Screenshot%20from%image.png)
+![Image of shellcode_development](https://raw.githubusercontent.com/mucomplex/shellcode_development/master/images/image.png)
