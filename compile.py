@@ -63,12 +63,12 @@ class compile():
                 ret = (int *)&ret + 2;
                 (*ret) = (int)shellcode;
                 }
-            '''
+            \n'''
             with open(self.program_name+'.c','w') as file:
                 file.write(generate_c)
                 file.close()
-            os.system('gcc -fno-stack-protector -z execstack '+self.program_name+'.c -o '+self.program_name+'_c -m32')
-            os.system('sudo chown root:root '+self.program_name+'_c && sudo chmod 4755 '+self.program_name+'_c')
+            os.system('gcc -fno-stack-protector -z execstack '+self.program_name+'.c -o '+self.program_name+'_new -m32')
+            os.system('sudo chown root:root '+self.program_name+'_new && sudo chmod 4755 '+self.program_name+'_new')
             print('\n[*] Complete generate')
 
     # check file is exist
