@@ -85,6 +85,8 @@ for _help in sys.argv :
         general_function.help()
 
 # first argument settings
+if len(sys.argv) < 2 or len(sys.argv) >3:
+    general_function.help()
 compile_program = compile(sys.argv[1])
 if len(sys.argv) == 2:
     if sys.argv[1] == 'install':
@@ -92,6 +94,8 @@ if len(sys.argv) == 2:
     else:
         compile_program.generate()
 # 2nd argument settings
-if len(sys.argv) == 3:
+elif len(sys.argv) == 3:
     if sys.argv[2] == 'shell':
         compile_program.disassemble()
+    else:
+        general_function.help()
