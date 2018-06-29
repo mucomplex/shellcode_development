@@ -67,7 +67,7 @@ class compile():
         with open(self.program_name+'.c','w') as file:
             file.write(generate_c)
             file.close()
-        os.system('gcc '+self.program_name+'.c -o '+self.program_name+'_c -m32')
+        os.system('gcc -fno-stack-protector -z execstack '+self.program_name+'.c -o '+self.program_name+'_c -m32')
         print('[*] Complete generate')
 
     # check file is exist
