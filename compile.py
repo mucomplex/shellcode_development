@@ -16,6 +16,7 @@ class general():
 
     def install(self):
         os.system('sudo apt-get install nasm')
+        os.system('sudo apt-get install gcc-multilib')
 
 class compile():
     # initialize program
